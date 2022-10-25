@@ -3,8 +3,20 @@ POST http://localhost:5000/users
 Content-Type: application/json
 
 {
-    "name": "Sudirman",
-    "email": "sudirman@unram.ac.id",
+    "name": "Joy Boy",
+    "email": "joyboy@unram.ac.id",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "admin"
+}
+
+###
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "User delete",
+    "email": "userdelete@unram.ac.id",
     "password": "123456",
     "confPassword": "123456",
     "role": "users"
@@ -16,16 +28,42 @@ GET http://localhost:5000/users
 
 ###
 //single user show
-GET http://localhost:5000/users/df295e4c-3b5a-4df4-bb8d-ed915aa39104
+GET http://localhost:5000/users/50cd4a04-dbc5-443a-ae6f-d7f507909965
 
 ###
-PATCH http://localhost:5000/users/2e22eca3-3864-4ea5-b965-886101210a9e
+PATCH  http://localhost:5000/users/50cd4a04-dbc5-443a-ae6f-d7f507909965
 Content-Type: application/json
 
 {
-    "name": "Sudirman update",
-    "email": "sudirman@unram.ac.id",
+    "name": "Joy Boy Update",
+    "email": "joyboy@unram.ac.id",
     "password": "",
     "confPassword": "",
-    "role": "users"
+    "role": "admin"
 }
+
+###
+//delete
+DELETE http://localhost:5000/users/c9ee3a34-0af3-4ac6-9b18-71b74d9c5949
+
+###
+//login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email": "joyboy@unram.ac.id",
+    "password": "123456"
+}
+###
+ POST http://localhost:5000/login
+ Content-Type: application/json
+
+ {
+    "email": "user@unram.ac.id",
+    "password": "123456"
+ }
+###
+GET http://localhost:5000/me
+###
+DELETE http://localhost:5000/logout
