@@ -1,0 +1,31 @@
+//create user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name": "Sudirman",
+    "email": "sudirman@unram.ac.id",
+    "password": "123456",
+    "confPassword": "123456",
+    "role": "users"
+}
+
+###
+//get all user
+GET http://localhost:5000/users
+
+###
+//single user show
+GET http://localhost:5000/users/df295e4c-3b5a-4df4-bb8d-ed915aa39104
+
+###
+PATCH http://localhost:5000/users/2e22eca3-3864-4ea5-b965-886101210a9e
+Content-Type: application/json
+
+{
+    "name": "Sudirman update",
+    "email": "sudirman@unram.ac.id",
+    "password": "",
+    "confPassword": "",
+    "role": "users"
+}
