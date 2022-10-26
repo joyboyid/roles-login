@@ -35,7 +35,7 @@ PATCH  http://localhost:5000/users/50cd4a04-dbc5-443a-ae6f-d7f507909965
 Content-Type: application/json
 
 {
-    "name": "Joy Boy Update",
+    "name": "Joy Boy",
     "email": "joyboy@unram.ac.id",
     "password": "",
     "confPassword": "",
@@ -67,3 +67,23 @@ Content-Type: application/json
 GET http://localhost:5000/me
 ###
 DELETE http://localhost:5000/logout
+
+###
+GET http://localhost:5000/products/0baffe5c-367f-4248-aa23-fcb95f3200c6
+
+###
+//get single product
+GET http://localhost:5000/products/
+
+###
+//add product
+POST http://localhost:5000/products
+Content-Type: application/json
+
+{
+    "name": "produk 999",
+    "price": 8890000
+}
+
+###
+GET http://localhost:5000/products
