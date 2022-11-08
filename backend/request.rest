@@ -69,9 +69,6 @@ GET http://localhost:5000/me
 DELETE http://localhost:5000/logout
 
 ###
-GET http://localhost:5000/products/0baffe5c-367f-4248-aa23-fcb95f3200c6
-
-###
 //get single product
 GET http://localhost:5000/products/
 
@@ -86,4 +83,22 @@ Content-Type: application/json
 }
 
 ###
-GET http://localhost:5000/products
+PATCH http://localhost:5000/products/5c4a0c63-b287-491c-896e-85bc5d98ff99
+Content-Type: application/json
+
+{
+    "name": "update",
+    "price": 0000
+}
+
+###
+PATCH http://localhost:5000/products/4050569e-1ca9-4e5a-a143-d1edd9dac5fb
+Content-Type: application/json
+
+{
+    "name": "Produk 7 update",
+    "price": 9090
+}
+
+###
+DELETE http://localhost:5000/products/4050569e-1ca9-4e5a-a143-d1edd9dac5fb
